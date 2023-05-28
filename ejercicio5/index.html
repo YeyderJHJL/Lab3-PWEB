@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/mystyle.css">
+		<script>
+			function recitar (markupText) {
+				const url = "http://localhost:3000/";
+				const data = {
+					text: markupText
+				}
+				console.log(data);
+				const request = {
+					method: "POST", //Podría ser GET
+					headers: {
+						"Content-type": "application/json"
+					},
+					body: JSON.stringify(data)
+				};
+				http = fetch(url, request);
+				http.then(
+					response => response.json()
+				).then(
+					data => {
+						document.querySelector("#htmlCode").innerHTML = data.text
+					}
+				)
+			}
+			document.addEventListener("DOMContentLoaded", function () {
+				const text = document.querySelector("#markupText");
+				document.querySelector("#markupForm").onsubmit = () => {
+					recitar(text.value);
+					return false;
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<h1>convertir MarkDown a HTML (probando nodejs)</h1>
+		<form id="markupForm">
+			<textarea id="markupText" rows="10" cols="50" placeholder="Ingrese texto markdown"></textarea>
+			<br>
+			<input type="submit" value="Convertir texto">
+		</form>
+		<div id="htmlCode">Aquí se verá el resultado</div>
+	</body>
+</html>
+

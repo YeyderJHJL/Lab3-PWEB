@@ -297,6 +297,15 @@ Su aplicación debe ser de página única, es decir que sólo habrá un archivo 
 
 -   Si los enlaces proporcionado en esta guía no le son suficientes, puede revisar códigos en Internet que le ayuden con cosas como ejemplos: listar un directorio en NodeJS; pero deberá incluir los enlaces correspondientes en sus archivos como comentarios y sólo podrá usar código de stackoverflow, incluir código de cualquier otra fuente está prohibido y se considerará actitud deshonesta.
 
+## Resolucion
+-  Listado de los archivos Html creados.
+![Listado](./grupal/imgs/listadoMarkdowns.png) 
+
+-  Creacion de un nuevo Archivo.
+![Creacion](./grupal/imgs/creandoMarkdown.png) 
+
+-  Visualizacion de un  Archivo.
+![Creacion](./grupal/imgs/visualizandoTexto.png) 
 #
 
 ## CUESTIONARIO
@@ -308,11 +317,13 @@ Su aplicación debe ser de página única, es decir que sólo habrá un archivo 
     - Poema.txt es un archivo que simula ser una base de datos en el ejemplo. En la programacion web es casi indispensable tener una, que ayude a manejar una cantidad de datos, como usuarios, cuentas u otros datos delicados. Los archivos .js pueden acceder a ella ya que necesitan conocer que cantidad de datos van a cargar en su respuesta, sin embargo los usuarios no deberian tener acceso a esta informacion delicada, ya que podrian alterarla, y en consecuencia afectar a otros usuarios. Por ello es que el .txt deberia estar en una carpeta privada donde solo pueda ser accedida por personal autorizado para hacer cambios.
 
 - ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?
-    - En el Ejercicio 4, de los problemas resueltos, se hace uso de una expresion regular, antes de una respuesta en formato json, el servidor procesa el archivo .txt reemplazando los saltos de linea `/\n/g` , por `<br>` de forma global , este caso representa el cuidado que se debe tener cuando se utilizan archivos con extensiones distintas. Las expresiones regulares pueden utilizarse para automatizar estas "traducciones" asi el resultado final en el front end, sea el esperado. 
+    - En el Ejercicio 4, de los problemas resueltos, se hace uso de una expresion regular, antes de una respuesta en formato json, el servidor procesa el archivo .txt reemplazando los saltos de linea `/\n/g` , por `<br>` de forma global.<br>
+    Este caso representa el cuidado que se debe tener cuando se utilizan archivos con extensiones distintas. Las expresiones regulares pueden utilizarse para automatizar estas "traducciones" asi el resultado final en el front end, sea el esperado. 
 
     ![captura de Texto plano](./grupal/imgs/ExpresionRegular.png)
 
 - Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?
+    - Es posible obtener el resultado adaptando el formato a json, para que el navegador lo interprete como html. Para eso se utilizan las funciones de Javascript, mediante eventos. Esta forma de trabajar permite la interaccion asincrona entre el servidor y el cliente, ya que en el ejercicio 5 se muestra como es posible crear una pagina respetando el formato html, persolisandola con markdown.   
 
 #
 

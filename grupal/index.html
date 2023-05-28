@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown a HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="titulo">Markdown a HTML</h1>
+    <div class="container">
+        <div class="sidebar">
+            <form id="crearForm">
+                <h3>Crear Archivo</h3>
+                <input type="text" id="fileName" placeholder="Nombre del archivo">
+                <input type="submit" id="crearArchivo" value="Crear">
+            </form>
+            <div id="listaDeArchivos">
+                <h3>Lista de Archivos</h3>
+                <ul id="archivosGuardados"></ul>
+            </div>
+        </div>
+        <div id="vistaPrevia" style="visibility: hidden;">
+            <div id="markdownHTML">
+                <h3 id="nombreArchivo">Nombre de Archivo</h3>
+                <form id="markupForm">
+                    <textarea id="markupText" rows="8" cols="50"></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+                <form id="convertidoForm" style="display:none;">
+                    <h3>Markdown convertido a HTML</h3>
+                    <div id="htmlCode"></div>
+                    <input type="submit" id="guardarArchivo" id="guardarArchivo" value="Guardar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
